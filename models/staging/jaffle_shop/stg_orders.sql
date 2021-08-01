@@ -4,7 +4,7 @@ with dbt_orders as (
         user_id as customer_id,
         order_date,
         status
-    FROM `crested-timer-319112.dbt_adavey.orders`
+    FROM {{ source('dbt_adavey', 'orders') }}
 )
 
 SELECT * FROM dbt_orders

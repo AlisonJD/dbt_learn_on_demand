@@ -4,6 +4,6 @@ SELECT
     first_name,
     last_name 
 
-FROM `crested-timer-319112.dbt_adavey.customers`
+FROM {{ source('dbt_adavey', 'customers') }}
 )
 select * from dbt_customers
